@@ -5,9 +5,29 @@ import { Container, Row, Col } from "reactstrap";
 import products from "../assets/fakeData/product";
 import ProductCard from "../components/Ul/product-card/ProductCard";
 import "../styles/allFoods.css";
+import ReactPaginate from "react-paginate";
+
 const AllFoods = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [productData, setProductData] = useState(products);
+
+  const [pageNum, setPageNum] = useState(0);
+
+  const searchedProduct = products.filter((item) => {
+    if (searchTerm === "") return item;
+    if (item.title.toLowerCase().includes(searchTerm.toLowerCase()))
+      return item;
+  });
+  const productPerPage = 8;
+  const visitedPage = pageNum * productPerPage;
+
+  const displayPage = searchedProduct.slice(
+    visitedPage,
+    visitedPage + productPerPage
+  );
+  const pageCount = Math.ceil(searchedProduct.length / productPerPage);
+  const changePage = ({ selected }) => {
+    setPageNum(selected);
+  };
   return (
     <Helmet title="All Foods">
       <CommonSection title="All Foods" />
@@ -21,7 +41,10 @@ const AllFoods = () => {
                   type="text"
                   placeholder="I'm looking for... "
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={(e) => {
+                    setSearchTerm(e.target.value);
+                    setPageNum(0);
+                  }}
                 />
                 <span>
                   <i className="ri-search-line"></i>
@@ -40,17 +63,21 @@ const AllFoods = () => {
               </div>
             </Col>
 
-            {productData
-              ?.filter((item) => {
-                if (searchTerm === "") return item;
-                if (item.title.toLowerCase().includes(searchTerm.toLowerCase()))
-                  return item;
-              })
-              .map((item) => (
-                <Col lg="3" md="4" sm="6" xs="6">
-                  <ProductCard key={item.id} item={item} className="mb-4" />
-                </Col>
-              ))}
+            {displayPage.map((item) => (
+              <Col lg="3" md="4" sm="6" xs="6">
+                <ProductCard key={item.id} item={item} className="mb-4" />
+              </Col>
+            ))}
+
+            <div>
+              <ReactPaginate
+                pageCount={pageCount}
+                onPageChange={changePage}
+                previousLabel="Prev"
+                nextLabel="Next"
+                containerClassName="paginationBtns"
+              />
+            </div>
           </Row>
         </Container>
       </section>
