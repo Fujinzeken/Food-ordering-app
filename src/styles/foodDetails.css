@@ -41,6 +41,54 @@
   padding: 30px 0;
 }
 
+.tab__content p {
+  line-height: 30px;
+  color: #212245b5;
+}
+
 .tab__active {
   color: #df2020;
+}
+
+.form {
+  width: 60%;
+  margin: auto;
+  background: #fde4e4;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form__group {
+  margin-bottom: 20px;
+}
+.form__group input,
+textarea {
+  width: 100%;
+  background: transparent;
+  padding: 7px 20px;
+  border: none;
+  border-bottom: 1px solid #2122454c;
+}
+
+.form__group input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.user__name {
+  font-weight: 600;
+  color: #212245;
+}
+
+.user__email {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.feedback__text {
+  color: #212245b5;
+}
+
+.img__item {
+  cursor: pointer;
 }

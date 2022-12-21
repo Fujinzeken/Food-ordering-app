@@ -13,9 +13,13 @@ const AllFoods = () => {
   const [pageNum, setPageNum] = useState(0);
 
   const searchedProduct = products.filter((item) => {
-    if (searchTerm === "") return item;
-    if (item.title.toLowerCase().includes(searchTerm.toLowerCase()))
+    if (searchTerm === "") {
       return item;
+    }
+    if (item.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+      return item;
+    }
+    return null;
   });
   const productPerPage = 8;
   const visitedPage = pageNum * productPerPage;
