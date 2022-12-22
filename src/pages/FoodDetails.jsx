@@ -147,6 +147,7 @@ const FoodDetails = () => {
                         placeholder="Enter your name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
+                        required
                       />
                     </div>
 
@@ -156,6 +157,7 @@ const FoodDetails = () => {
                         placeholder="Enter your email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        required
                       />
                     </div>
 
@@ -166,6 +168,7 @@ const FoodDetails = () => {
                         placeholder="Write a review"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
+                        required
                       />
                     </div>
 
@@ -181,7 +184,7 @@ const FoodDetails = () => {
               )}
             </Col>
             <Col lg="12" className="mt-4 mb-5">
-              <h2>You might also like</h2>
+              <h2 className="related__product-title">You might also like</h2>
             </Col>
             {relatedProducts.map((item) => (
               <Col lg="3" md="4" sm="6" xs="6" key={item.id} className="mb-4">

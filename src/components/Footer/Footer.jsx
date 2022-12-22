@@ -32,7 +32,7 @@ const Footer = () => {
             <h5 className="footer__title">Contact</h5>
             <ListGroup className="delivery__time-list">
               <ListGroupItem className="delivery__time-item border-0 ps-0">
-                <p>Location: 30, Ayanwale, VI, Lagos.</p>
+                <span>Location: 30, Ayanwale, VI, Lagos.</span>
               </ListGroupItem>
               <ListGroupItem className="delivery__time-item border-0 ps-0">
                 <span>Phone: 08123456789</span>
@@ -44,7 +44,7 @@ const Footer = () => {
           </Col>
           <Col lg="3" md="4" sm="6">
             <h5 className="footer__title">Newsletter</h5>
-            <p>Subscribe our Newsletter</p>
+            <p className="footer__word">Subscribe our Newsletter</p>
             <div className="newsletter">
               <input type="email" placeholder="Enter your email" />
               <span>

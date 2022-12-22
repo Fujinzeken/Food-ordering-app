@@ -125,7 +125,10 @@
   .cart__icon i,
   .user i,
   .mobile__menu i {
-    font-size: 1rem;
+    font-size: 1.4rem;
+  }
+  .cart__badge {
+    cursor: pointer;
   }
 
   .show__menu {

@@ -227,8 +227,12 @@
     justify-content: center;
   }
 
+  .food__category {
+    width: 100%;
+    padding: 10px 0;
+  }
   .food__category button {
-    font-size: 10px;
+    font-size: 7px;
     padding: 7px 10px;
   }
 }

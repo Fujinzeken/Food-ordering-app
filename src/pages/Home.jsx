@@ -139,9 +139,9 @@ const Home = () => {
           <Row>
             <Col lg="12" className="text-center">
               <h5 className="feature__subtitle mb-4">what we serve</h5>
-              <h2 className="feature__title">Just sit back at home</h2>
+              <h2 className="feature__title">Just sit back and order,</h2>
               <h2 className="feature__title">
-                We will <span>take care</span>
+                lets take care of your <span> taste buds</span>
               </h2>
               <p className="mb-1 mt-4 feature__text">
                 some jagoons i need to find a lorem generator for my work
