@@ -30,7 +30,7 @@ const CartItem = ({ id, title, price, image01, quantity, totalPrice }) => {
                   dispatch(calcTotal());
                 }}
               >
-                <i class="ri-add-line"></i>
+                <i className="ri-add-line"></i>
               </span>
               <span className="number__btn">{quantity}</span>
               <sapn
@@ -40,7 +40,7 @@ const CartItem = ({ id, title, price, image01, quantity, totalPrice }) => {
                   dispatch(calcTotal());
                 }}
               >
-                <i class="ri-subtract-line"></i>
+                <i className="ri-subtract-line"></i>
               </sapn>
             </div>
           </div>
@@ -53,7 +53,7 @@ const CartItem = ({ id, title, price, image01, quantity, totalPrice }) => {
             }}
           >
             {console.log(id)}
-            <i class="ri-close-line"></i>
+            <i className="ri-close-line"></i>
           </span>
         </div>
       </div>

@@ -14,7 +14,7 @@ const Cart = () => {
       <ListGroup className="cart">
         <div className="cart__close">
           <span onClick={() => dispatch(toggle())}>
-            <i class="ri-close-fill"></i>
+            <i className="ri-close-fill"></i>
           </span>
         </div>
 
@@ -40,7 +40,7 @@ const Cart = () => {
           <h6>
             Subtotal : <span>${totalAmount}</span>
           </h6>
-          <button>
+          <button onClick={() => dispatch(toggle())}>
             <Link to="/checkout">Checkout</Link>
           </button>
         </div>

@@ -1,0 +1,19 @@
+.signup {
+  color: #df2020;
+}
+
+.google__btn {
+  margin-left: 20px;
+  padding: 5px 15px;
+  font-size: 1.1rem;
+  background: #282829;
+  color: white;
+  border-radius: 5px;
+}
+
+.sign__up-link {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}

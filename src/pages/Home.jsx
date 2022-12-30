@@ -109,7 +109,7 @@ const Home = () => {
                 <div className="hero__service d-flex align-items-center gap-5 mt-3">
                   <p className="d-flex align-items-center gap-2">
                     <span className="delivery__icon">
-                      <i class="ri-car-line"></i>
+                      <i className="ri-car-line"></i>
                     </span>
                     Free Delivery
                   </p>
@@ -272,7 +272,7 @@ const Home = () => {
                 <ListGroup className="mt-5">
                   <ListGroupItem className="border-0 ps-0">
                     <p className="choose__us-title d-flex align-items-center gap-2">
-                      <i class="ri-checkbox-circle-line"></i>
+                      <i className="ri-checkbox-circle-line"></i>
                       Fresh and tasty Food.
                     </p>
                     <p className="choose__us-desc">
@@ -282,7 +282,7 @@ const Home = () => {
 
                   <ListGroupItem className="border-0 ps-0">
                     <p className="choose__us-title d-flex align-items-center gap-2">
-                      <i class="ri-checkbox-circle-line"></i>
+                      <i className="ri-checkbox-circle-line"></i>
                       Quality for Your money, Quality for your taste buds.
                     </p>
                     <p className="choose__us-desc">
@@ -292,7 +292,7 @@ const Home = () => {
 
                   <ListGroupItem className="border-0 ps-0">
                     <p className="choose__us-title d-flex align-items-center gap-2">
-                      <i class="ri-checkbox-circle-line"></i>
+                      <i className="ri-checkbox-circle-line"></i>
                       Order from any location
                     </p>
                     <p className="choose__us-desc">

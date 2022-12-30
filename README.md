@@ -1,6 +1,6 @@
 A Food Ordering Web Application.
 
-Join our thousands of customers and enjoy freshly made meals, whenever, wherever.
+Join our thousands of customers @ Foodie inc and enjoy freshly made meals, whenever, wherever.
 
 Tech Stack used:
 
@@ -10,3 +10,4 @@ Tech Stack used:
 4. remixicons
 5. react-router-dom
 6. react-slick
+7. Firebase

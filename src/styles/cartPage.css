@@ -1,0 +1,45 @@
+th {
+  text-align: center;
+}
+
+.cart__img-box {
+  width: 80px;
+}
+
+.cart__item-del i {
+  cursor: pointer;
+}
+
+.cart__page-btn {
+  display: flex;
+  gap: 20px;
+}
+
+.cart__page-btn button a:hover {
+  color: #fff;
+}
+
+.cart__subtotal span {
+  color: #df2020;
+  font-size: 1.1rem;
+}
+
+.product__checkout {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  background-color: #212245;
+  color: white;
+}
+
+.product__checkout:hover {
+  color: #df2020;
+}
+
+@media (max-width: 768px) {
+  th,
+  td {
+    font-size: 0.8rem;
+  }
+}

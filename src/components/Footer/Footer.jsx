@@ -48,7 +48,7 @@ const Footer = () => {
             <div className="newsletter">
               <input type="email" placeholder="Enter your email" />
               <span>
-                <i class="ri-send-plane-line"></i>
+                <i className="ri-send-plane-line"></i>
               </span>
             </div>
           </Col>
@@ -64,22 +64,22 @@ const Footer = () => {
               <p className="m-0">Follow: </p>
               <span>
                 <Link to="facebook.com">
-                  <i class="ri-facebook-line"></i>
+                  <i className="ri-facebook-line"></i>
                 </Link>
               </span>
               <span>
                 <Link to="instagram.com">
-                  <i class="ri-instagram-line"></i>
+                  <i className="ri-instagram-line"></i>
                 </Link>
               </span>
               <span>
                 <Link to="twitter.com">
-                  <i class="ri-twitter-line"></i>
+                  <i className="ri-twitter-line"></i>
                 </Link>
               </span>
               <span>
                 <Link to="linkedin.com">
-                  <i class="ri-linkedin-line"></i>
+                  <i className="ri-linkedin-line"></i>
                 </Link>
               </span>
             </div>
