@@ -32,6 +32,7 @@
   font-weight: 600;
   font-size: 1.2rem;
   color: #df2020;
+  display: flex;
 }
 
 .product__btn {
@@ -48,13 +49,18 @@
   color: #df2020;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .product__content h5 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .product__price {
+    font-size: 1rem !important;
+    color: #df2020;
   }
   .product__btn {
     padding: 5px 15px;
-    font: 0.8em;
+    font-size: 0.7rem !important;
   }
   .product__item {
     width: 90%;

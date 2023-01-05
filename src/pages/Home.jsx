@@ -173,7 +173,7 @@ const Home = () => {
               <h2>Popular Foods</h2>
             </Col>
             <Col lg="12">
-              <div className="food__category d-flex align-items-center justify-content-center gap-3">
+              <div className="food__category d-flex align-items-center justify-content-center gap-2">
                 <button
                   className={`all__btn ${
                     category === "All" ? "foodbtnActive" : "none"
