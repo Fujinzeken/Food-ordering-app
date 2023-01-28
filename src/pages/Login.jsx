@@ -8,6 +8,8 @@ import {
   signInWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithPopup,
+  signInWithRedirect,
+  getRedirectResult,
 } from "firebase/auth";
 import { auth, provider, db } from "../firebase";
 import { doc, setDoc } from "firebase/firestore";
@@ -34,6 +36,40 @@ const Login = () => {
   const handleGoogleSignup = async () => {
     try {
       const result = await signInWithPopup(auth, provider);
+      // This gives you a Google Access Token. You can use it to access the Google API.
+
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      console.log(credential);
+      // const token = credential.accessToken;
+      // The signed-in user info.
+      const user = result.user;
+      console.log(user);
+
+      await setDoc(doc(db, "users", result.user.uid), {
+        uid: result.user.uid,
+        displayName: result.user.displayName,
+        email: result.user.email,
+      });
+
+      navigate("/home");
+    } catch (err) {
+      const errorCode = err.code;
+      const errorMessage = err.message;
+      console.log(errorCode, errorMessage);
+      // The email of the user's account used.
+      // const email = err.customData.email;
+      // // The AuthCredential type that was used.
+      const credential = GoogleAuthProvider.credentialFromError(err);
+      console.log(credential);
+      // ...
+    }
+  };
+
+  const handleGoogleSignupMobile = async () => {
+    try {
+      await signInWithRedirect(auth, provider);
+      console.log(auth);
+      const result = await getRedirectResult(auth);
       // This gives you a Google Access Token. You can use it to access the Google API.
       const credential = GoogleAuthProvider.credentialFromResult(result);
       console.log(credential);
@@ -84,7 +120,16 @@ const Login = () => {
               <Link to="/register">
                 Don't have an account? <span className="signup">Sign up!</span>
               </Link>
-              <button className="google__btn" onClick={handleGoogleSignup}>
+              <button
+                className="google__btn desktop"
+                onClick={handleGoogleSignup}
+              >
+                Sign In with Google
+              </button>
+              <button
+                className="google__btn mobile"
+                onClick={handleGoogleSignupMobile}
+              >
                 Sign In with Google
               </button>
             </div>

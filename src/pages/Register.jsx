@@ -97,7 +97,16 @@ const Register = () => {
                 Already have an account?{" "}
                 <span className="signup">Sign In!</span>
               </Link>
-              <button className="google__btn" onClick={handleGoogleSignup}>
+              <button
+                className="google__btn desktop"
+                onClick={handleGoogleSignup}
+              >
+                Sign up with Google
+              </button>
+              <button
+                className="google__btn mobile"
+                onClick={handleGoogleSignup}
+              >
                 Sign up with Google
               </button>
             </div>

@@ -11,9 +11,27 @@
   border-radius: 5px;
 }
 
+.desktop {
+  display: flex;
+}
+
+.mobile {
+  display: none;
+}
+
 .sign__up-link {
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+  }
 }
